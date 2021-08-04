@@ -6,7 +6,7 @@
     margin-bottom: 5px;
     min-width: 620px;
     &__titre{
-        font-family: oswald, Calibri, 'Trebuchet MS', sans-serif;
+        font-family: oswald;
         font-size: 5rem;
         text-align: center;
         color: $color-secondary;
@@ -30,7 +30,7 @@
     &__btn-menu{
         display: none;
         color: $color-primary;
-        font-family: oswald, Calibri, 'Trebuchet MS', sans-serif;
+        font-family: oswald;
         width: max-content;
         height: 70px;
         border-radius: 50px;
@@ -76,7 +76,7 @@
     }
     &__btn{
         text-align: center;
-        font-family: oswald, Calibri, 'Trebuchet MS', sans-serif;
+        font-family: oswald;
         min-width: max-content;
         font-size: 2rem;
         margin: 0 15px;
@@ -147,7 +147,7 @@
     text-align: center;
     color: $color-primary;
     &__titre{
-        font-family: oswald, Calibri, 'Trebuchet MS', sans-serif;
+        font-family: oswald;
         font-size: 3rem;
         color: $color-secondary;
     }
@@ -160,14 +160,14 @@
         margin-bottom: 10px;
         &--strong{
             font-weight: bold;
-            font-family: oswald, Calibri, 'Trebuchet MS', sans-serif;
+            font-family: oswald;
         }
         &--info{
-            font-family: droid-serif, Calibri, 'Trebuchet MS', sans-serif;
+            font-family: droid-serif;
             font-style: normal;
         }
         &--low{
-            font-family: droid-serif, Calibri, 'Trebuchet MS', sans-serif;
+            font-family: droid-serif;
             font-size: 1.0rem;
             font-style: normal;
         }
