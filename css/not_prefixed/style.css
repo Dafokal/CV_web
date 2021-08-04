@@ -4,10 +4,7 @@
 }
 @font-face {
   font-family: droid-serif;
-  src: url("fonts/DroidSerif-Regular-webfont.eot");
-  src: url("fonts/DroidSerif-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/DroidSerif-Regular-webfont.woff2") format("woff2"), url("fonts/DroidSerif-Regular-webfont.woff") format("woff"), url("fonts/DroidSerif-Regular-webfont.ttf") format("truetype"), url("fonts/DroidSerif-Regular-webfont.svg#droid_serifregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
+  src: url("fonts/DroidSerif-Regular-webfont.ttf") format("truetype");
 }
 @keyframes nav-btn {
   100% {
