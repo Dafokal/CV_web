@@ -1,0 +1,524 @@
+@font-face {
+  font-family: oswald;
+  src: url("fonts/Oswald-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: droid-serif;
+  src: url("fonts/DroidSerif-Regular-webfont.eot");
+  src: url("fonts/DroidSerif-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/DroidSerif-Regular-webfont.woff2") format("woff2"), url("fonts/DroidSerif-Regular-webfont.woff") format("woff"), url("fonts/DroidSerif-Regular-webfont.ttf") format("truetype"), url("fonts/DroidSerif-Regular-webfont.svg#droid_serifregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@keyframes nav-btn {
+  100% {
+    transform: scale(1.05);
+  }
+}
+@keyframes nav-border {
+  100% {
+    border-bottom: 2px solid #50f79b;
+  }
+}
+@keyframes opacity-animation {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes bg-animation {
+  0% {
+    opacity: 0;
+  }
+  5%, 25% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  35% {
+    transform: translateX(-5%);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes mail-animation {
+  0% {
+    transform: rotateX(0);
+  }
+  25%, 100% {
+    transform: rotateX(180deg);
+  }
+}
+@keyframes color-animation {
+  12% {
+    opacity: 0;
+  }
+  13%, 100% {
+    opacity: 1;
+  }
+}
+@keyframes sheet-animation {
+  0% {
+    transform: translateY(0);
+  }
+  50%, 100% {
+    transform: translateY(-13px);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  user-select: none;
+}
+* ::selection {
+  background: #dfffec;
+}
+
+body {
+  background: #0a0a0a;
+}
+
+section {
+  display: none;
+}
+
+.name {
+  font-family: oswald, Calibri, "Trebuchet MS", sans-serif;
+  opacity: 0;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 4px 20px;
+  font-size: 1.5rem;
+  color: #50f79b;
+  text-align: start;
+}
+.name--animation {
+  animation: opacity-animation 300ms both;
+}
+
+.bg {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.bg__img {
+  position: absolute;
+  top: 0;
+  left: auto;
+  right: -5%;
+  bottom: auto;
+  width: 105%;
+  min-width: 1500px;
+  max-width: 1600px;
+}
+@media screen and (max-width: 1199px) {
+  .bg__img {
+    right: -10%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .bg__img {
+    right: -15%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .bg__img {
+    right: -20%;
+  }
+}
+@media screen and (max-width: 620px) {
+  .bg__img {
+    display: none;
+  }
+}
+.bg__img--1 {
+  animation: bg-animation 40s infinite both linear;
+}
+.bg__img--2 {
+  animation: bg-animation 40s 10s infinite both linear;
+}
+.bg__img--3 {
+  animation: bg-animation 40s 20s infinite both linear;
+}
+.bg__img--4 {
+  animation: bg-animation 40s 30s infinite both linear;
+}
+
+.levels__html-level {
+  margin-top: 5px;
+  display: inline-block;
+  position: relative;
+  border: 1px solid #50f79b;
+  height: 10px;
+  width: 80px;
+  border-radius: 10px;
+}
+.levels__html-level--in {
+  border-radius: 10px 0 0 10px;
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  background: #50f79b;
+  transform-origin: left;
+  width: 55%;
+}
+.levels__css-level {
+  margin-top: 5px;
+  display: inline-block;
+  position: relative;
+  border: 1px solid #50f79b;
+  height: 10px;
+  width: 80px;
+  border-radius: 10px;
+}
+.levels__css-level--in {
+  border-radius: 10px 0 0 10px;
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  background: #50f79b;
+  transform-origin: left;
+  width: 65%;
+}
+.levels__js-level {
+  margin-top: 5px;
+  display: inline-block;
+  position: relative;
+  border: 1px solid #50f79b;
+  height: 10px;
+  width: 80px;
+  border-radius: 10px;
+}
+.levels__js-level--in {
+  border-radius: 10px 0 0 10px;
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  background: #50f79b;
+  transform-origin: left;
+  width: 50%;
+}
+
+.btn-download {
+  margin: 3px;
+}
+.btn-download:hover {
+  cursor: pointer;
+  animation: nav-btn 400ms both infinite alternate cubic-bezier(0.13, 0, 0.86, 1);
+}
+
+.btn-linkedin {
+  display: none;
+  opacity: 0;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 30px 115px;
+  transition: transform 200ms ease-in-out;
+}
+@media screen and (max-width: 620px) {
+  .btn-linkedin {
+    margin: 30px 80px;
+  }
+}
+.btn-linkedin--animation {
+  display: block;
+  animation: opacity-animation 300ms both;
+}
+.btn-linkedin:hover {
+  transform: scale(1.1);
+}
+
+.btn-mail {
+  display: none;
+  opacity: 0;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 33px 30px;
+  width: 60px;
+  height: 40px;
+}
+@media screen and (max-width: 620px) {
+  .btn-mail {
+    margin: 33px 10px;
+  }
+}
+.btn-mail--animation {
+  display: block;
+  animation: opacity-animation 300ms both;
+}
+.btn-mail .mail {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 200ms ease-in-out;
+}
+.btn-mail .mail:hover {
+  transform: scale(1.1);
+}
+.btn-mail .mail__inside {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #08a64f;
+}
+.btn-mail .mail__sheet {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 66%;
+  height: 90%;
+  background: #e9e9e9;
+}
+.btn-mail .mail__sheet.sheet-animation {
+  animation: sheet-animation 1000ms 170ms cubic-bezier(0.44, 0, 0.22, 0.73) both alternate 2;
+}
+.btn-mail .mail__body {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  border-top: 20px solid transparent;
+  border-left: 30px solid #0ad766;
+  border-right: 30px solid #0ad766;
+  border-bottom: 20px solid #0ad766;
+}
+.btn-mail .mail__head {
+  z-index: 4;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right-width: 30px;
+  border-left-width: 30px;
+  border-top: 20px solid #50f79b;
+}
+.btn-mail .mail__head.mail-animation {
+  transform-origin: top;
+  animation: mail-animation 1200ms ease-in-out both alternate 2;
+}
+.btn-mail .mail__head.mail-animation::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  bottom: -20px;
+  right: -30px;
+  left: -30px;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right-width: 30px;
+  border-left-width: 30px;
+  border-top: 20px solid #08a64f;
+  opacity: 0;
+  animation: color-animation 1200ms ease-in-out both alternate 2;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 140px;
+  margin-bottom: 5px;
+  min-width: 620px;
+}
+.header__titre {
+  font-family: oswald, Calibri, "Trebuchet MS", sans-serif;
+  font-size: 5rem;
+  text-align: center;
+  color: #50f79b;
+}
+
+.nav {
+  z-index: 2;
+  margin-bottom: 400px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  width: 100%;
+  min-width: 620px;
+  max-height: 77px;
+  min-height: 77px;
+  background: #0a0a0a;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+.nav.nav--animation {
+  animation: nav-border 700ms both;
+}
+.nav__btn-menu {
+  display: none;
+  color: #dfffec;
+  font-family: oswald, Calibri, "Trebuchet MS", sans-serif;
+  width: max-content;
+  height: 70px;
+  border-radius: 50px;
+  border: 2px solid #50f79b;
+  margin: auto;
+  padding: 0 10px 0 20px;
+  font-size: 3rem;
+  text-align: center;
+  transition: color 200ms 100ms, background 200ms, transform 200ms;
+}
+.nav__btn-menu:hover {
+  cursor: pointer;
+  color: #0a0a0a;
+  background: #50f79b;
+  transform: scale(1.1);
+}
+@media screen and (max-width: 1199px) {
+  .nav__btn-menu {
+    display: block;
+  }
+}
+.nav__container {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 1199px) {
+  .nav__container {
+    display: none;
+  }
+}
+.nav__container--menu {
+  display: none;
+  width: max-content;
+  margin: 7px auto;
+  background: #0a0a0a;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 7px;
+  border: 2px solid #50f79b;
+}
+.nav__container--menu .nav__btn {
+  min-width: 190px;
+  margin: 7px;
+  border-radius: 7px;
+}
+.nav__btn {
+  text-align: center;
+  font-family: oswald, Calibri, "Trebuchet MS", sans-serif;
+  min-width: max-content;
+  font-size: 2rem;
+  margin: 0 15px;
+  padding: 15px;
+  border: 2px solid #50f79b;
+  border-radius: 50px;
+  color: #dfffec;
+  transition: color 200ms 100ms, background 200ms;
+}
+.nav__btn:hover {
+  cursor: pointer;
+  color: #0a0a0a;
+  background: #50f79b;
+  animation: nav-btn 400ms both infinite alternate cubic-bezier(0.13, 0, 0.86, 1);
+}
+
+.section-bloc {
+  z-index: 1;
+  width: 60%;
+  min-width: 550px;
+  margin: 130px auto;
+  margin-bottom: 50px;
+  padding: 30px;
+  border-radius: 7px;
+  border: 2px solid #50f79b;
+  background: #111111;
+}
+
+.identite-bloc {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.identite-bloc .text:nth-child(1) {
+  width: 90%;
+}
+.identite-bloc .text:nth-child(2) {
+  width: 45%;
+  min-width: 360px;
+}
+.identite-bloc .text:nth-child(3) {
+  width: 45%;
+  min-width: 360px;
+}
+.identite-bloc .text:nth-child(4) {
+  width: 90%;
+}
+.identite-bloc__competences {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.identite-bloc__competences h3 {
+  width: 100%;
+}
+.identite-bloc__competences p:nth-child(1) {
+  width: 35%;
+}
+.identite-bloc__competences div {
+  width: 35%;
+}
+
+.text {
+  text-align: center;
+  color: #dfffec;
+}
+.text__titre {
+  font-family: oswald, Calibri, "Trebuchet MS", sans-serif;
+  font-size: 3rem;
+  color: #50f79b;
+}
+.text__img {
+  margin-bottom: 10px;
+  width: 230px;
+}
+.text__p {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.text__p--strong {
+  font-weight: bold;
+  font-family: oswald, Calibri, "Trebuchet MS", sans-serif;
+}
+.text__p--info {
+  font-family: droid-serif, Calibri, "Trebuchet MS", sans-serif;
+  font-style: normal;
+}
+.text__p--low {
+  font-family: droid-serif, Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+}
+
+/*# sourceMappingURL=style.css.map */

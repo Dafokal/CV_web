@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: normal;
+    user-select: none;
+    ::selection{
+        background: $color-primary;
+    }
+}
+
+body{
+    background: $color-bg;
+}
+
+section{
+    display: none;
+}

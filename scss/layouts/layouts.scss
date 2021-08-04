@@ -1,0 +1,175 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 140px;
+    margin-bottom: 5px;
+    min-width: 620px;
+    &__titre{
+        font-family: oswald, Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 5rem;
+        text-align: center;
+        color: $color-secondary;
+    }
+}
+
+.nav{
+    z-index: 2;
+    margin-bottom: 400px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    width: 100%;
+    min-width: 620px;
+    max-height: 77px;
+    min-height: 77px;
+    background: $color-bg;
+    border-bottom: 2px solid rgba(0,0,0,0);
+    &.nav--animation{
+        animation: nav-border 700ms both;
+    }
+    &__btn-menu{
+        display: none;
+        color: $color-primary;
+        font-family: oswald, Calibri, 'Trebuchet MS', sans-serif;
+        width: max-content;
+        height: 70px;
+        border-radius: 50px;
+        border: 2px solid $color-secondary;
+        margin: auto;
+        padding: 0 10px 0 20px;
+        font-size: 3rem;
+        text-align: center;
+        transition: color 200ms 100ms, background 200ms, transform 200ms;
+        &:hover{
+            cursor: pointer;
+            color: $color-bg;
+            background: $color-secondary;
+            transform: scale(1.1);
+        }
+        @include desktop-only{
+            display: block;
+        }
+    }
+    &__container{
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        @include desktop-only{
+            display: none;
+        }
+        &--menu{
+            display: none;
+            width: max-content;
+            margin: 7px auto;
+            background: $color-bg;
+            position: relative;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 7px;
+            border: 2px solid $color-secondary;
+            & .nav__btn{
+                min-width: 190px;
+                margin: 7px;
+                border-radius: 7px;
+            }
+        }
+    }
+    &__btn{
+        text-align: center;
+        font-family: oswald, Calibri, 'Trebuchet MS', sans-serif;
+        min-width: max-content;
+        font-size: 2rem;
+        margin: 0 15px;
+        padding: 15px;
+        border: 2px solid $color-secondary;
+        border-radius: 50px;
+        color: $color-primary;
+        transition: color 200ms 100ms, background 200ms;
+        &:hover{
+            cursor: pointer;
+            color: $color-bg;
+            background: $color-secondary;
+            animation: nav-btn 400ms both infinite alternate cubic-bezier(.13,0,.86,1);
+        }
+    }
+}
+
+.section-bloc{
+    z-index: 1;
+    width: 60%;
+    min-width: 550px;
+    margin: 130px auto;
+    margin-bottom: 50px;
+    padding: 30px;
+    border-radius: 7px;
+    border: 2px solid $color-secondary;
+    background: $color-tertiary;
+}
+
+.identite-bloc{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    & .text{
+        &:nth-child(1){
+            width: 90%;
+        }
+        &:nth-child(2){
+            width: 45%;
+            min-width: 360px;
+            
+        }
+        &:nth-child(3){
+            width: 45%;
+            min-width: 360px;
+        }
+        &:nth-child(4){
+            width: 90%;
+        }
+    }
+    &__competences{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        & h3{
+            width: 100%;
+        }
+        & p:nth-child(1){
+            width: 35%;
+        }
+        & div{
+            width: 35%;
+        }
+    }
+}
+
+.text{
+    text-align: center;
+    color: $color-primary;
+    &__titre{
+        font-family: oswald, Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 3rem;
+        color: $color-secondary;
+    }
+    &__img{
+        margin-bottom: 10px;
+        width: 230px;
+    }
+    &__p{
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        &--strong{
+            font-weight: bold;
+            font-family: oswald, Calibri, 'Trebuchet MS', sans-serif;
+        }
+        &--info{
+            font-family: droid-serif, Calibri, 'Trebuchet MS', sans-serif;
+            font-style: normal;
+        }
+        &--low{
+            font-family: droid-serif, Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.0rem;
+            font-style: normal;
+        }
+    }
+}
