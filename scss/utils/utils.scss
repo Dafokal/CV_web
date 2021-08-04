@@ -84,6 +84,12 @@ $breakpoints:(
     }
 }
 
+@keyframes loader{
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
 @keyframes nav-btn{
     100%{
         transform: scale(1.05);

@@ -6,6 +6,11 @@
   font-family: droid-serif;
   src: url("fonts/DroidSerif-Regular-webfont.ttf") format("truetype");
 }
+@keyframes loader {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
 @keyframes nav-btn {
   100% {
     transform: scale(1.05);
@@ -90,7 +95,17 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: red;
+  background: #0a0a0a;
+}
+.loader__wheel {
+  margin: 220px auto;
+  text-align: center;
+  width: max-content;
+  height: max-content;
+  animation: nav-btn 500ms both infinite alternate ease-in-out;
+}
+.loader__wheel--img {
+  animation: loader 800ms infinite both linear;
 }
 
 .name {
