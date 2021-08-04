@@ -1,12 +1,16 @@
 $(document).ready(function(){
 
+    $(window).on("load",function() {
+        $(".loader").fadeOut("1000");
+    })
+
     var index;
     var opened;
 
     $(".nav__btn-menu").click(function(e){
         e.stopPropagation();
         $(".nav__container--menu").slideToggle(300);
-    });
+    })
 
     $(document).click(function(){
         $(".nav__container--menu").slideUp(300);
