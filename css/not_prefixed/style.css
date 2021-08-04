@@ -139,7 +139,7 @@ section {
   right: -5%;
   bottom: auto;
   width: 105%;
-  min-width: 1500px;
+  min-width: 1600px;
   max-width: 1600px;
 }
 @media screen and (max-width: 1199px) {
