@@ -107,6 +107,9 @@ section {
 .loader__wheel--img {
   animation: loader 800ms infinite both linear;
 }
+.loader__wheel p {
+  margin-top: 10px;
+}
 
 .name {
   font-family: oswald;

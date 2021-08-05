@@ -17,7 +17,9 @@
         &--img{
             animation: loader 800ms infinite both linear;
         }
-        
+        & p{
+            margin-top: 10px;
+        }
     }
 }
 
