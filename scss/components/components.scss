@@ -31,6 +31,9 @@
     top: 0;
     left: 0;
     margin: 4px 20px;
+    @include mini-only{
+        margin: 4px 15px;
+    }
     font-size: 1.5rem;
     color: $color-secondary;
     text-align: start;
@@ -54,11 +57,10 @@
         @include desktop-only{right: -10%;}
         @include tablet-only{right: -15%;}
         @include mobile-only{right: -20%;}
-        @include mini-only{display: none;}
+        @include mini-only{right: -30%;}
         bottom: auto;
         width: 105%;
         min-width: 1600px;
-        max-width: 1600px;
         &--1{
             animation: bg-animation 40s infinite both linear;
         }
@@ -75,6 +77,11 @@
 }
 
 .levels{
+    @include mini-only{
+        transform: scale(0.86);
+        position: relative;
+        bottom: 5px;
+    }
     &__html-level{
         @include level(55%);
     }

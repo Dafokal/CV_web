@@ -4,10 +4,15 @@
     align-items: center;
     margin-top: 140px;
     margin-bottom: 5px;
-    min-width: 620px;
+    @include mini-only{
+        margin-bottom: 0;
+    }
     &__titre{
         font-family: oswald;
         font-size: 5rem;
+        @include mini-only{
+            font-size: 4rem;
+        }
         text-align: center;
         color: $color-secondary;
     }
@@ -19,7 +24,6 @@
     padding-top: 17px;
     padding-bottom: 17px;
     width: 100%;
-    min-width: 620px;
     max-height: 77px;
     min-height: 77px;
     background: $color-bg;
@@ -29,15 +33,22 @@
     }
     &__btn-menu{
         display: none;
+        @include desktop-only{
+            display: block;
+        }
         color: $color-primary;
         font-family: oswald;
         width: max-content;
-        height: 70px;
+        height: max-content;
         border-radius: 50px;
         border: 2px solid $color-secondary;
         margin: auto;
         padding: 0 10px 0 20px;
         font-size: 3rem;
+        @include mini-only{
+            font-size: 2.5rem;
+            margin-top: 5px;
+        }
         text-align: center;
         transition: color 200ms 100ms, background 200ms, transform 200ms;
         &:hover{
@@ -45,9 +56,6 @@
             color: $color-bg;
             background: $color-secondary;
             transform: scale(1.1);
-        }
-        @include desktop-only{
-            display: block;
         }
     }
     &__container{
@@ -71,6 +79,10 @@
                 min-width: 190px;
                 margin: 7px;
                 border-radius: 7px;
+                @include mini-only{
+                    font-size: 1.66rem;
+                    min-width: 150px;
+                }
             }
         }
     }
@@ -97,7 +109,6 @@
 .section-bloc{
     z-index: 1;
     width: 60%;
-    min-width: 550px;
     margin: 130px auto;
     margin-bottom: 50px;
     padding: 30px;
@@ -149,6 +160,9 @@
     &__titre{
         font-family: oswald;
         font-size: 3rem;
+        @include mini-only{
+            font-size: 2.5rem;
+        }
         color: $color-secondary;
     }
     &__img{
@@ -157,6 +171,9 @@
     }
     &__p{
         font-size: 1.5rem;
+        @include mini-only{
+            font-size: 1.25rem;
+        }
         margin-bottom: 10px;
         &--strong{
             font-weight: bold;
@@ -169,6 +186,9 @@
         &--low{
             font-family: droid-serif;
             font-size: 1.0rem;
+            @include mini-only{
+                font-size: 0.84rem;
+            }
             font-style: normal;
         }
         &--link{
