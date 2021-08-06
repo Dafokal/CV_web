@@ -11,7 +11,7 @@
         font-family: oswald;
         font-size: 5rem;
         @include mini-only{
-            font-size: 4rem;
+            font-size: 3.5rem;
         }
         text-align: center;
         color: $color-secondary;
@@ -26,6 +26,9 @@
     width: 100%;
     max-height: 77px;
     min-height: 77px;
+    @include mini-only{
+        min-height: 50px;
+    }
     background: $color-bg;
     border-bottom: 2px solid rgba(0,0,0,0);
     &.nav--animation{
@@ -46,8 +49,8 @@
         padding: 0 10px 0 20px;
         font-size: 3rem;
         @include mini-only{
-            font-size: 2.5rem;
-            margin-top: 5px;
+            font-size: 2rem;
+            margin-top: 0px;
         }
         text-align: center;
         transition: color 200ms 100ms, background 200ms, transform 200ms;
@@ -80,8 +83,8 @@
                 margin: 7px;
                 border-radius: 7px;
                 @include mini-only{
-                    font-size: 1.66rem;
-                    min-width: 150px;
+                    font-size: 1.34rem;
+                    min-width: 120px;
                 }
             }
         }
@@ -110,6 +113,9 @@
     z-index: 1;
     width: 60%;
     margin: 130px auto;
+    @include mini-only{
+        margin: 100px auto;
+    }
     margin-bottom: 50px;
     padding: 30px;
     border-radius: 7px;
@@ -128,11 +134,20 @@
         &:nth-child(2){
             width: 45%;
             min-width: 360px;
-            
+            @include desktop-only{
+                width: 90%;
+                min-width: 0;
+            }  
         }
         &:nth-child(3){
             width: 45%;
+            max-width: 360px;
             min-width: 360px;
+            @include desktop-only{
+                width: 90%;
+            }
+            @include mini-only{}
+            min-width: 200px;
         }
         &:nth-child(4){
             width: 90%;
@@ -161,18 +176,21 @@
         font-family: oswald;
         font-size: 3rem;
         @include mini-only{
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
         color: $color-secondary;
     }
     &__img{
         margin-bottom: 10px;
         width: 230px;
+        @include mini-only{
+            width: 165px;
+        }  
     }
     &__p{
         font-size: 1.5rem;
         @include mini-only{
-            font-size: 1.25rem;
+            font-size: 1rem;
         }
         margin-bottom: 10px;
         &--strong{
@@ -187,7 +205,7 @@
             font-family: droid-serif;
             font-size: 1.0rem;
             @include mini-only{
-                font-size: 0.84rem;
+                font-size: 0.66rem;
             }
             font-style: normal;
         }

@@ -10,6 +10,9 @@
     background: $color-bg;
     &__wheel{
         margin: 220px auto;
+        @include mini-only{
+            margin: 170px auto;
+        }
         text-align: center;
         width: max-content;
         height: max-content;
@@ -32,7 +35,8 @@
     left: 0;
     margin: 4px 20px;
     @include mini-only{
-        margin: 4px 15px;
+        margin: 9px 10px;
+        font-size: 1rem;
     }
     font-size: 1.5rem;
     color: $color-secondary;
@@ -78,9 +82,9 @@
 
 .levels{
     @include mini-only{
-        transform: scale(0.86);
+        transform: scale(0.68);
         position: relative;
-        bottom: 5px;
+        bottom: 10px;
     }
     &__html-level{
         @include level(55%);
@@ -94,7 +98,11 @@
 }
 
 .btn-download{
+    width: 80px;
     margin: 3px;
+    @include mini-only{
+        width: 60px;
+    }
     &:hover{
         cursor: pointer;
         animation: nav-btn 400ms both infinite alternate cubic-bezier(.13,0,.86,1);
@@ -109,7 +117,10 @@
     top: 0;
     right: 0;
     margin: 30px 115px;
-    @include mini-only{ margin: 30px 80px;}
+    @include mini-only{
+        margin: 18px 52px;
+        transform: scale(0.7);
+    }
     transition: transform 200ms ease-in-out;
     &--animation{
         display: block;
@@ -117,6 +128,9 @@
     }
     &:hover{
         transform: scale(1.1);
+        @include mini-only{
+            transform: scale(0.8);
+        }
     }
 }
 
@@ -128,7 +142,10 @@
     top: 0;
     right: 0;
     margin: 33px 30px;
-    @include mini-only{ margin: 33px 10px;}
+    @include mini-only{
+        margin: 21px 0px;
+        transform: scale(0.7);
+    }
     width: $width-mail;
     height: $height-mail;
     &--animation{

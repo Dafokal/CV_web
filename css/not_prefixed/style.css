@@ -104,6 +104,11 @@ section {
   height: max-content;
   animation: nav-btn 500ms both infinite alternate ease-in-out;
 }
+@media screen and (max-width: 620px) {
+  .loader__wheel {
+    margin: 170px auto;
+  }
+}
 .loader__wheel--img {
   animation: loader 800ms infinite both linear;
 }
@@ -125,7 +130,8 @@ section {
 }
 @media screen and (max-width: 620px) {
   .name {
-    margin: 4px 15px;
+    margin: 9px 10px;
+    font-size: 1rem;
   }
 }
 .name--animation {
@@ -184,9 +190,9 @@ section {
 
 @media screen and (max-width: 620px) {
   .levels {
-    transform: scale(0.86);
+    transform: scale(0.68);
     position: relative;
-    bottom: 5px;
+    bottom: 10px;
   }
 }
 .levels__html-level {
@@ -248,7 +254,13 @@ section {
 }
 
 .btn-download {
+  width: 80px;
   margin: 3px;
+}
+@media screen and (max-width: 620px) {
+  .btn-download {
+    width: 60px;
+  }
 }
 .btn-download:hover {
   cursor: pointer;
@@ -267,7 +279,8 @@ section {
 }
 @media screen and (max-width: 620px) {
   .btn-linkedin {
-    margin: 30px 80px;
+    margin: 18px 52px;
+    transform: scale(0.7);
   }
 }
 .btn-linkedin--animation {
@@ -276,6 +289,11 @@ section {
 }
 .btn-linkedin:hover {
   transform: scale(1.1);
+}
+@media screen and (max-width: 620px) {
+  .btn-linkedin:hover {
+    transform: scale(0.8);
+  }
 }
 
 .btn-mail {
@@ -291,7 +309,8 @@ section {
 }
 @media screen and (max-width: 620px) {
   .btn-mail {
-    margin: 33px 10px;
+    margin: 21px 0px;
+    transform: scale(0.7);
   }
 }
 .btn-mail--animation {
@@ -402,7 +421,7 @@ section {
 }
 @media screen and (max-width: 620px) {
   .header__titre {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 }
 
@@ -416,6 +435,11 @@ section {
   min-height: 77px;
   background: #0a0a0a;
   border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+@media screen and (max-width: 620px) {
+  .nav {
+    min-height: 50px;
+  }
 }
 .nav.nav--animation {
   animation: nav-border 700ms both;
@@ -441,8 +465,8 @@ section {
 }
 @media screen and (max-width: 620px) {
   .nav__btn-menu {
-    font-size: 2.5rem;
-    margin-top: 5px;
+    font-size: 2rem;
+    margin-top: 0px;
   }
 }
 .nav__btn-menu:hover {
@@ -479,8 +503,8 @@ section {
 }
 @media screen and (max-width: 620px) {
   .nav__container--menu .nav__btn {
-    font-size: 1.66rem;
-    min-width: 150px;
+    font-size: 1.34rem;
+    min-width: 120px;
   }
 }
 .nav__btn {
@@ -512,6 +536,11 @@ section {
   border: 2px solid #50f79b;
   background: #111111;
 }
+@media screen and (max-width: 620px) {
+  .section-bloc {
+    margin: 100px auto;
+  }
+}
 
 .identite-bloc {
   display: flex;
@@ -525,9 +554,22 @@ section {
   width: 45%;
   min-width: 360px;
 }
+@media screen and (max-width: 1199px) {
+  .identite-bloc .text:nth-child(2) {
+    width: 90%;
+    min-width: 0;
+  }
+}
 .identite-bloc .text:nth-child(3) {
   width: 45%;
+  max-width: 360px;
   min-width: 360px;
+  min-width: 200px;
+}
+@media screen and (max-width: 1199px) {
+  .identite-bloc .text:nth-child(3) {
+    width: 90%;
+  }
 }
 .identite-bloc .text:nth-child(4) {
   width: 90%;
@@ -558,12 +600,17 @@ section {
 }
 @media screen and (max-width: 620px) {
   .text__titre {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 .text__img {
   margin-bottom: 10px;
   width: 230px;
+}
+@media screen and (max-width: 620px) {
+  .text__img {
+    width: 165px;
+  }
 }
 .text__p {
   font-size: 1.5rem;
@@ -571,7 +618,7 @@ section {
 }
 @media screen and (max-width: 620px) {
   .text__p {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 }
 .text__p--strong {
@@ -589,7 +636,7 @@ section {
 }
 @media screen and (max-width: 620px) {
   .text__p--low {
-    font-size: 0.84rem;
+    font-size: 0.66rem;
   }
 }
 .text__p--link {
