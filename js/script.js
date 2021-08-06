@@ -29,6 +29,7 @@ $(document).ready(function(){
             else{
                 $(".nav__container--menu").slideUp(300);
                 $("section").eq(opened).fadeOut(300, function(){
+                $("body").scrollTop(0);
                 $("section").eq(index).fadeIn(300);
                 opened= index;
                 });

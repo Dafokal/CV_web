@@ -171,5 +171,14 @@
             font-size: 1.0rem;
             font-style: normal;
         }
+        &--link{
+            cursor: pointer;
+            color: $color-link;
+            text-decoration: none;
+            transition: color 50ms ease-in-out;
+            &:hover{
+                color: $color-secondary;
+            }
+        }
     }
 }

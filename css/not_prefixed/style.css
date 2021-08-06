@@ -547,5 +547,14 @@ section {
   font-size: 1rem;
   font-style: normal;
 }
+.text__p--link {
+  cursor: pointer;
+  color: #A5FFCA;
+  text-decoration: none;
+  transition: color 50ms ease-in-out;
+}
+.text__p--link:hover {
+  color: #50f79b;
+}
 
 /*# sourceMappingURL=style.css.map */
