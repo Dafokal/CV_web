@@ -28,6 +28,7 @@
     min-height: 77px;
     @include mini-only{
         min-height: 50px;
+        max-height: 50px;
     }
     background: $color-bg;
     border-bottom: 2px solid rgba(0,0,0,0);
