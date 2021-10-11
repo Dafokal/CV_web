@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch scss/main.scss:css/not_prefixed/style.css",
-    "prefix": "postcss ./css/not_prefixed/style.css --use autoprefixer -d ./css/",
+    "sass": "sass --watch scss/main.scss:css/style.css",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/",
     "browserslist": "last 4 versions"
   },
   "author": "",

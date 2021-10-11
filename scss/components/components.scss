@@ -165,7 +165,7 @@
         &__inside{
             z-index: 1;
             @include pseudo-position;
-            background: darken($color-secondary, 30);
+            background: darken($color-secondary, 20);
         }
         &__sheet{
             z-index: 2;
@@ -184,9 +184,9 @@
             height: 0;
             width: 0;
             border-top: $height-border solid transparent;
-            border-left: $width-border solid darken($color-secondary, 20);
-            border-right: $width-border solid darken($color-secondary, 20);
-            border-bottom: $height-border solid darken($color-secondary, 20);
+            border-left: $width-border solid darken($color-secondary, 10);
+            border-right: $width-border solid darken($color-secondary, 10);
+            border-bottom: $height-border solid darken($color-secondary, 10);
         }
         &__head{
             z-index: 4;
@@ -212,7 +212,7 @@
                     border: 0 solid transparent;
                     border-right-width: $width-border;
                     border-left-width: $width-border;
-                    border-top: $height-border solid darken($color-secondary, 30);
+                    border-top: $height-border solid darken($color-secondary, 20);
                     opacity: 0;
                     animation: color-animation 1200ms ease-in-out both alternate 2;
                 }

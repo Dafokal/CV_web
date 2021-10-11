@@ -30,10 +30,9 @@
         min-height: 50px;
         max-height: 50px;
     }
-    background: $color-bg;
     border-bottom: 2px solid rgba(0,0,0,0);
     &.nav--animation{
-        animation: nav-border 700ms both;
+        animation: border-animation 700ms both;
     }
     &__btn-menu{
         display: none;
@@ -44,9 +43,9 @@
         font-family: oswald;
         width: max-content;
         height: max-content;
-        border-radius: 50px;
+        border-radius: 8px;
         border: 2px solid $color-secondary;
-        margin: auto;
+        margin: 3px auto;
         padding: 0 10px 0 10px;
         font-size: 3rem;
         @include mini-only{
@@ -95,10 +94,10 @@
         font-family: oswald;
         min-width: max-content;
         font-size: 2rem;
-        margin: 0 15px;
-        padding: 15px;
+        margin: 3px 5px;
+        padding: 10px;
         border: 2px solid $color-secondary;
-        border-radius: 50px;
+        border-radius: 8px;
         color: $color-primary;
         transition: color 200ms 100ms, background 200ms;
         &:hover{
