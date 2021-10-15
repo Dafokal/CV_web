@@ -10,7 +10,7 @@
     background: $color-bg;
     &__wheel{
         margin: 220px auto;
-        @include mini-only{
+        @include mobile-only{
             margin: 170px auto;
         }
         text-align: center;
@@ -19,6 +19,10 @@
         animation: nav-btn 500ms both infinite alternate ease-in-out;
         &--img{
             animation: loader 800ms infinite both linear;
+            width: 120px;
+            @include mini-only{
+                width: 90px;
+            }
         }
         & p{
             margin-top: 10px;
@@ -34,7 +38,7 @@
     top: 0;
     left: 0;
     margin: 4px 20px;
-    @include mini-only{
+    @include mobile-only{
         margin: 9px 10px;
         font-size: 1rem;
     }
@@ -81,10 +85,11 @@
 }
 
 .levels{
-    @include mini-only{
+    margin-left: 5px;
+    @include mobile-only{
         transform: scale(0.68);
         position: relative;
-        bottom: 10px;
+        bottom: 13px;
     }
     &__html-level{
         @include level(55%);
@@ -100,7 +105,7 @@
 .btn-download{
     width: 80px;
     margin: 3px;
-    @include mini-only{
+    @include mobile-only{
         width: 60px;
     }
     &:hover{
@@ -117,7 +122,7 @@
     top: 0;
     right: 0;
     margin: 30px 115px;
-    @include mini-only{
+    @include mobile-only{
         margin: 18px 52px;
         transform: scale(0.7);
     }
@@ -128,7 +133,7 @@
     }
     &:hover{
         transform: scale(1.1);
-        @include mini-only{
+        @include mobile-only{
             transform: scale(0.8);
         }
     }
@@ -142,7 +147,7 @@
     top: 0;
     right: 0;
     margin: 33px 30px;
-    @include mini-only{
+    @include mobile-only{
         margin: 21px 0px;
         transform: scale(0.7);
     }

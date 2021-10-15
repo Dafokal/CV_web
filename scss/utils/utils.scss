@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: droid-serif;
-    src: url('fonts/DroidSerif-Regular-webfont.ttf') format("truetype");
+    src: url('fonts/Bodonitown.ttf') format("truetype");
 }
 
 $color-primary: rgb(223, 255, 236);
@@ -67,6 +67,9 @@ $breakpoints:(
 
 @mixin level($width){
     margin-top: 5px;
+    @include mobile-only{
+        margin-top: 7px;
+    }
     display: inline-block;
     position: relative;
     border: 1px solid $color-secondary;

@@ -4,6 +4,7 @@
     border: 0;
     font-weight: normal;
     user-select: none;
+    list-style-type: none;
     ::selection{
         background: $color-primary;
     }
